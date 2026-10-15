@@ -1,0 +1,10 @@
+name = "r2-cloud-drive"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# R2 存储桶绑定:先在 Cloudflare 后台建好存储桶,再把下面名字换成你的
+[[r2_buckets]]
+binding = "DRIVE"
+bucket_name = "my-drive"
+
+# 登录密码不要写在这里!去 Worker > Settings > Variables 里加 Secret,名字 PASSWORD
